@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const Button = ({ options, onLeaveFeedback }) => {
   return (
-    <div>
+    <div className={css.buttonBox}>
       {options.map(option => (
         <button
           type="button"
@@ -19,6 +19,7 @@ export const Button = ({ options, onLeaveFeedback }) => {
 };
 
 Button.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  options: PropTypes.arrayOf(PropTypes.oneOf(['good', 'neutral', 'bad']))
+    .isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
