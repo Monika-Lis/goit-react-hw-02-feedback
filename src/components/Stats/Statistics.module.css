@@ -6,7 +6,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 11px;
   list-style: none;
   text-transform: capitalize;
   margin: 0px;
